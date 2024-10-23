@@ -1,16 +1,7 @@
 def apply_all_func(int_list, *functions):
     results = {}
     for func in functions:
-        if func == max:
-            results[func.__name__] = max(int_list)
-        elif func == min:
-            results[func.__name__] = min(int_list)
-        elif func == len:
-            results[func.__name__] = len(int_list)
-        elif func == sum:
-            results[func.__name__] = sum(int_list)
-        elif func == sorted:
-            results[func.__name__] = sorted(int_list)
+        results[func.__name__] = func(int_list)
     return results
 
 
