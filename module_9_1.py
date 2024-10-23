@@ -9,7 +9,7 @@ def apply_all_func(int_list, *functions):
             results[func.__name__] = len(int_list)
         elif func == sum:
             results[func.__name__] = sum(int_list)
-        if func == sorted:
+        elif func == sorted:
             results[func.__name__] = sorted(int_list)
     return results
 
